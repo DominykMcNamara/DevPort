@@ -1,7 +1,16 @@
-<template >
-    <div class="flex w-32 justify-between" id="application-logo">
+<script setup>
+const props = defineProps({
+    width: String,
+    height: String
+})
+</script>
 
-            <svg class="h-16 w-16" fill="#000000" version="1.1" viewBox="0 0 1024 1024"
+
+
+<template >
+    <div class="flex w-32 justify-between">
+
+            <svg :height="props.height" :width="props.width" fill="#000000" version="1.1" viewBox="0 0 1024 1024"
                  xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
@@ -12,9 +21,8 @@
                 </g>
             </svg>
 
-        <h1 class="my-auto">DevPort</h1>
+        <h1 class="my-auto font-bold">DevPort</h1>
     </div>
 
 </template>
-<script setup>
-</script>
+

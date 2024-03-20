@@ -8,11 +8,8 @@ import Dropdown from "@/Components/Dropdown.vue";
 </script>
 
 <template>
-    <nav class="flex justify-around w-[100vw] mx-auto py-2 border-b  border-gray-100 drop-shadow-2xl sticky">
-
-        <ApplicationLogo id="application-logo"/>
-
-        <ul class="w-96 flex  justify-around my-auto">
+    <nav class="my-auto">
+        <ul class="flex justify-around w-96">
             <li>
                 <ResponsiveNavLink :active="$page.component === 'Home'" href="/">Home</ResponsiveNavLink>
             </li>
