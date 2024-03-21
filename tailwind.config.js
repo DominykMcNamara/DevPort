@@ -11,11 +11,19 @@ export default {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Roboto', ...defaultTheme.fontFamily.sans],
-            },
+        screens: {
+            xxs: '280px',
+            xs: '375px',
+            sm: '412px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px',
         },
+
+        fontFamily: {
+            sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+        },
+
     },
 
     plugins: [forms],

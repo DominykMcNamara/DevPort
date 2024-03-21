@@ -6,10 +6,10 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 </script>
 
 <template>
-    <section class="bg-gray-200 py-3 shadow-sm">
+    <section class="bg-gray-200 py-3 w-[100vw]  text-slate-800 shadow-lg tracking-wide">
         <header class ="flex justify-around">
 
-            <ApplicationLogo height="100" width="100" id="application-logo"/>
+            <ApplicationLogo height="50" width="50" id="application-logo"/>
 
             <NavBar/>
 
@@ -17,7 +17,7 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
     </section>
 
     <section>
-        <div class="" >
+        <div class="tracking-wide" >
             <slot/>
         </div>
     </section>

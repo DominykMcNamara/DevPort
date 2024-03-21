@@ -15,7 +15,7 @@ const props = defineProps({
 const classes = computed(() =>
     props.active
         ?
-        ' py-2 text-start text-base font-bold text-gray-800'
+        ' py-2 text-start text-base font-bold underline'
         :
         ' py-2  text-start text-base font-medium  hover:text-blue-600'
 );

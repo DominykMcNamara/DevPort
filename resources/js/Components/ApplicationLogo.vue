@@ -8,7 +8,7 @@ const props = defineProps({
 
 
 <template >
-    <div class="flex w-32 justify-between">
+    <div class="flex w-32 ">
 
             <svg :height="props.height" :width="props.width" fill="#000000" version="1.1" viewBox="0 0 1024 1024"
                  xmlns="http://www.w3.org/2000/svg">
