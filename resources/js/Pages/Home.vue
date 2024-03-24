@@ -1,5 +1,6 @@
 <script setup>
 import Layout from "@/Layouts/Layout.vue";
+import {Link} from "@inertiajs/vue3";
 import HomePortFolioSVG from "@/Components/HomePortFolioSVG.vue";
 
 defineProps();
@@ -21,9 +22,9 @@ defineProps();
                     world
                 </p>
                 <div>
-                    <a
+                    <Link
                         class="bg-blue-500 text-center py-5 px-20 text-white text-xl rounded-2xl shadow-lg hover:bg-blue-600"
-                        href="/register">Sign Up</a>
+                        href="/register">Sign Up</Link>
                 </div>
             </div>
 

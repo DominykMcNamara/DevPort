@@ -7,12 +7,8 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 
 <template>
     <section class="bg-gray-200 py-3 w-[100vw]  text-slate-800 shadow-lg tracking-wide">
-        <header class ="flex justify-around">
-
-            <ApplicationLogo height="50" width="50" id="application-logo"/>
-
+        <header>
             <NavBar/>
-
         </header>
     </section>
 
