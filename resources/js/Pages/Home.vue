@@ -1,6 +1,6 @@
 <script setup>
 import Layout from "@/Layouts/Layout.vue";
-import {Link} from "@inertiajs/vue3";
+import {Link, Head} from "@inertiajs/vue3";
 import HomePortFolioSVG from "@/Components/HomePortFolioSVG.vue";
 
 defineProps();
@@ -9,7 +9,8 @@ defineProps();
 
 
 <template>
-    <Layout>
+    <Head title="Devport" />
+
 
 
         <section class="flex flex-col items-center my-10 place-content-center h-[75vh] gap-10">
@@ -30,5 +31,5 @@ defineProps();
 
 
         </section>
-    </Layout>
+
 </template>

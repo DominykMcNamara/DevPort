@@ -31,7 +31,7 @@ const submit = () => {
 </script>
 
 <template>
-    <Layout>
+
         <Head title="Log in" />
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
@@ -39,6 +39,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit" class="grid place-content-center h-[75vh]">
+            <h1 class="text-center text-3xl my-2">Log In</h1>
             <div>
                 <InputLabel for="email" value="Email" />
 
@@ -91,5 +92,5 @@ const submit = () => {
                 </PrimaryButton>
             </div>
         </form>
-    </Layout>
+
 </template>
