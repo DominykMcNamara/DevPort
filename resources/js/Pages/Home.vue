@@ -24,7 +24,7 @@ defineProps();
                 </p>
                 <div>
                     <Link
-                        class="bg-blue-500 text-center py-5 px-20 text-white text-xl rounded-2xl shadow-lg hover:bg-blue-600"
+                        class="bg-blue-500 text-center p-5 text-white text-md rounded-2xl shadow-lg hover:bg-blue-600"
                         href="/register">Sign Up</Link>
                 </div>
             </div>
