@@ -7,7 +7,7 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 </script>
 
 <template>
-    <nav class="my-auto flex w-full justify-around">
+    <nav class="my-auto flex justify-around">
         <ApplicationLogo height="50" width="50" id="application-logo"/>
         <div class="md:hidden my-auto">
         <HamburgerMenu />

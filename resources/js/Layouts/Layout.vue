@@ -6,7 +6,7 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 </script>
 
 <template>
-    <section class="bg-gray-200 py-3 w-[100vw]  text-slate-800 shadow-lg tracking-wide">
+    <section class="bg-gray-200 py-3   text-slate-800 shadow-lg tracking-wide">
         <header>
             <NavBar/>
         </header>

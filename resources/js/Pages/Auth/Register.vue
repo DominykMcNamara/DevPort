@@ -6,8 +6,14 @@ import TextInput from '@/Components/TextInput.vue';
 import {Head, Link, useForm} from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
+    first_name: '',
+    last_name: '',
+    username: '',
     email: '',
+    pronouns: '',
+    location: '',
+    profile_picture: null,
+    bio: '',
     password: '',
     password_confirmation: '',
 });
@@ -18,32 +24,68 @@ const submit = () => {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+
+const handleFileUpload = (event) => {
+    form.profile_picture = event.target.files[0];
+}
+
 </script>
 
 <template>
 
     <Head title="Register"/>
 
-    <form class="grid place-content-center h-[75vh]" @submit.prevent="submit">
+    <form class="grid place-content-center my-10 h-[100vh]" @submit.prevent="submit">
         <h1 class="text-center text-3xl my-2">Register</h1>
         <div>
-            <InputLabel for="name" value="Name"/>
+            <InputLabel for="first_name" value="First Name *"/>
 
             <TextInput
-                id="name"
-                v-model="form.name"
-                autocomplete="name"
+                id="first_name"
+                v-model="form.first_name"
+                autocomplete="first_name"
                 autofocus
                 class="mt-1 block w-full"
                 required
                 type="text"
             />
 
-            <InputError :message="form.errors.name" class="mt-2"/>
+            <InputError :message="form.errors.first_name" class="mt-2"/>
         </div>
 
         <div class="mt-4">
-            <InputLabel for="email" value="Email"/>
+            <InputLabel for="last_name" value="Last Name *"/>
+
+            <TextInput
+                id="last_name"
+                v-model="form.last_name"
+                autocomplete="last_name"
+                autofocus
+                class="mt-1 block w-full"
+                required
+                type="text"
+            />
+
+            <InputError :message="form.errors.last_name" class="mt-2"/>
+        </div>
+
+        <div class="mt-4">
+            <InputLabel for="username" value="Username *"/>
+
+            <TextInput
+                id="username"
+                v-model="form.username"
+                autocomplete="username"
+                autofocus
+                class="mt-1 block w-full"
+                required
+                type="text"
+            />
+
+            <InputError :message="form.errors.username" class="mt-2"/>
+        </div>
+        <div class="mt-4">
+            <InputLabel for="email" value="Email *"/>
 
             <TextInput
                 id="email"
@@ -55,6 +97,37 @@ const submit = () => {
             />
 
             <InputError :message="form.errors.email" class="mt-2"/>
+        </div>
+
+        <div class="mt-4">
+            <InputLabel for="pronouns" value="Pronouns"/>
+
+            <TextInput
+                id="pronouns"
+                v-model="form.pronouns"
+                autocomplete="pronouns"
+                autofocus
+                class="mt-1 block w-full"
+                required
+                type="text"
+            />
+
+            <InputError :message="form.errors.pronouns" class="mt-2"/>
+        </div>
+
+        <div class="mt-4">
+            <InputLabel for="bio" value="Bio"/>
+            <textarea id="bio" v-model="form.bio" class="mt-1 block w-full"/>
+
+            <InputError :message="form.errors.bio" class="mt-2"/>
+        </div>
+
+        <div class="mt-4">
+            <InputLabel for="profile_picture" value="Profile Picture"/>
+
+            <input id="profile_picture" type="file" @change="handleFileUpload"/>
+
+            <InputError :message="form.errors.profile_picture" class="mt-2"/>
         </div>
 
         <div class="mt-4">
@@ -71,6 +144,7 @@ const submit = () => {
 
             <InputError :message="form.errors.password" class="mt-2"/>
         </div>
+
 
         <div class="mt-4">
             <InputLabel for="password_confirmation" value="Confirm Password"/>
