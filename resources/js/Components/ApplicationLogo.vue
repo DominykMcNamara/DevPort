@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
 
-    <Link class="flex">
+    <Link href="/" class="flex">
 
 
         <svg :height="props.height" :width="props.width" fill="#000000" version="1.1" viewBox="0 0 1024 1024"

@@ -1,6 +1,4 @@
 <script setup>
-
-
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import HamburgerMenu from "@/Components/HamburgerMenu.vue";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
@@ -17,10 +15,10 @@ import ApplicationLogo from "@/Components/ApplicationLogo.vue";
                 <ResponsiveNavLink :active="$page.component === 'Home'" href="/">Home</ResponsiveNavLink>
             </li>
             <li v-if="!$page.props.auth.user">
-                <ResponsiveNavLink :active="$page.component === 'Login'" href="/login">Log In</ResponsiveNavLink>
+                <ResponsiveNavLink :active="$page.url === '/login'" href="/login">Log In</ResponsiveNavLink>
             </li>
             <li v-if="!$page.props.auth.user">
-                <ResponsiveNavLink :active="$page.component === 'Register'" href="/register">Register
+                <ResponsiveNavLink :active="$page.url === '/register'" href="/register">Register
                 </ResponsiveNavLink>
             </li>
             <li v-if="$page.props.auth.user">
