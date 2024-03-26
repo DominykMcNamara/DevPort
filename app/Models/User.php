@@ -26,7 +26,7 @@ class User extends Authenticatable
         'email',
         'pronouns',
         'location',
-        'profile_picture',
+        'profile_pic',
         'role',
         'bio',
     ];
