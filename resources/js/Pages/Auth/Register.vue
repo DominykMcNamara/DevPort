@@ -35,7 +35,7 @@ const handleFileUpload = (event) => {
 
     <Head title="Register"/>
 
-    <form class="grid grid-flow-row grid-cols-1 p-10 place-items-center w-full gap-8" @submit.prevent="submit">
+    <form class="grid md:place-content-center   h-[100vh]" @submit.prevent="submit">
         <h1 class="text-center text-3xl my-2">Register</h1>
         <div>
             <InputLabel for="first_name" value="First Name *"/>
@@ -122,7 +122,7 @@ const handleFileUpload = (event) => {
             <InputError :message="form.errors.bio" class="mt-2"/>
         </div>
 
-        <div class="text-center flex-col">
+        <div class="text-center flex-col my-5">
             <InputLabel for="profile_picture" value="Profile Picture"/>
 
             <input id="profile_picture" class="mt-1 block w-full" type="file" @change="handleFileUpload"/>
